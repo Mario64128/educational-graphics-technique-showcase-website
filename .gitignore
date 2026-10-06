@@ -1,0 +1,12 @@
+.idea
+node_modules/
+dist/
+public/
+
+# Other useful things to ignore
+.DS_Store
+*.class
+a.out
+*.exe
+*.dll
+*~

@@ -1,12 +1,41 @@
-.idea
+# Dependencies
 node_modules/
-dist/
-public/
+.pnp
+.pnp.js
 
-# Other useful things to ignore
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Coverage and test artifacts
+coverage/
+.vitest/
+
+# Environment files
+*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# OS files
 .DS_Store
-*.class
-a.out
-*.exe
-*.dll
+
+# Temporary files
 *~
+

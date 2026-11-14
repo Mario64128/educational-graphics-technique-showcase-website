@@ -4,7 +4,7 @@ import RenderView from "./components/layout/RenderView.tsx";
 import RightView from "./components/layout/RightView.tsx";
 
 import "./App.css";
-import BottomView from "./components/layout/BottomView.tsx";
+import BottomSection from "./components/layout/BottomSection.tsx";
 
 export interface Size {
   width: number;
@@ -12,28 +12,26 @@ export interface Size {
 }
 
 function App() {
-  const baseW: number = 1200;
-  const baseH: number = 675;
+  const baseW: number = 1280;
+  const baseH: number = 720;
   const maxSize: Size = { width: baseW, height: baseH };
-  const minSize: Size = { width: baseW / 2.5, height: baseH / 2.5 };
+  const minSize: Size = { width: baseW / 2, height: baseH / 2 };
   const [size, setSize] = useState<Size>(maxSize);
 
   return (
     <>
       <Grid container sx={{ display: "flex" }}>
-        <Grid item="true">
+        <Grid item="true" sx={{ flexDirection: "row" }}>
           <RenderView
             size={size}
             maxSize={maxSize}
             minSize={minSize}
             setSize={setSize}
           />
+          <BottomSection maxSize={maxSize} />
         </Grid>
         <Grid item="true" size="grow">
           <RightView maxSize={maxSize} />
-        </Grid>
-        <Grid item="true" size={12}>
-          <BottomView maxSize={maxSize} />
         </Grid>
       </Grid>
     </>

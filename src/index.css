@@ -1,12 +1,13 @@
 #root {
-  font-family: Arial, system-ui;
+  font-family: Arial;
   width: 100%;
-  height: "max-content";
+  height: 100vh;
   background-color: blue;
 }
 
 body {
   margin: 0;
+  zoom: 100%;
 }
 
 p {

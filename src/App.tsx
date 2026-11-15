@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import RenderView from "./components/layout/RenderView.tsx";
 import RightView from "./components/layout/RightView.tsx";
 
@@ -12,26 +12,17 @@ export interface Size {
 }
 
 function App() {
-  const baseW: number = 1280;
-  const baseH: number = 720;
-  const maxSize: Size = { width: baseW, height: baseH };
-  const minSize: Size = { width: baseW / 2, height: baseH / 2 };
-  const [size, setSize] = useState<Size>(maxSize);
-
   return (
     <>
       <Grid container sx={{ display: "flex" }}>
-        <Grid item="true" sx={{ flexDirection: "row" }}>
-          <RenderView
-            size={size}
-            maxSize={maxSize}
-            minSize={minSize}
-            setSize={setSize}
-          />
-          <BottomSection maxSize={maxSize} />
+        <Grid item="true">
+          <Stack>
+            <RenderView />
+            <BottomSection />
+          </Stack>
         </Grid>
         <Grid item="true" size="grow">
-          <RightView maxSize={maxSize} />
+          <RightView />
         </Grid>
       </Grid>
     </>

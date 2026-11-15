@@ -3,20 +3,21 @@
 #bottomSection {
   display: flex;
   flex-direction: row;
+  height: 16.7dvh;
 }
 
-.itemBox {
+.linkBox {
   border-style: solid;
   border-width: 4.5px 4.5px 4.5px 0;
   background-color: black;
   color: white;
   font-weight: bold;
-  height: 100%;
   text-align: center;
   align-content: center;
+  flex-grow: 1;
 }
 
-.itemBox.split {
+.linkBox.split {
   align-content: normal;
   background-image: linear-gradient(
           to top left,
@@ -28,15 +29,16 @@
 }
 
 .topSplit {
-  margin-left: 5px;
-  margin-top: 5px;
+  position: relative;
   text-align: left;
+  top: 10%;
+  left: 5%;
 }
 
 .bottomSplit {
-  margin-right: 5px;
-  margin-bottom: 5px;
   position: relative;
-  top: 30%;
   text-align: right;
+  top: 55%;
+  right: 5%;
+
 }

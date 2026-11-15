@@ -1,6 +1,8 @@
 import { JSX, useState } from "react";
 import { ResizableBox } from "react-resizable";
 import { Box, Stack, Typography } from "@mui/material";
+import OptionsSpace from "./OptionsSpace";
+import ToolBox from "./ToolBox";
 import type { Size } from "../../App.tsx";
 
 interface RightViewProps {
@@ -12,12 +14,13 @@ function RightView({ maxSize }: RightViewProps): JSX.Element {
     <Box
       sx={{
         backgroundColor: "orange",
-        width: "100%",
-        height: "100svh",
+        height: "100dvh",
         minWidth: 200,
       }}
     >
       <InfoBox title={"Tool"} />
+      <OptionsSpace />
+      <ToolBox />
     </Box>
   );
 }
